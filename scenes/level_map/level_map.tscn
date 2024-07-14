@@ -595,6 +595,27 @@ position = Vector2(2524, 1294)
 [node name="Pickup3" parent="PickUps" instance=ExtResource("10_s1aqw")]
 position = Vector2(3072, 1185)
 
+[node name="Pickup4" parent="PickUps" instance=ExtResource("10_s1aqw")]
+position = Vector2(2554, 783)
+
+[node name="Pickup5" parent="PickUps" instance=ExtResource("10_s1aqw")]
+position = Vector2(2044, 383)
+
+[node name="Pickup6" parent="PickUps" instance=ExtResource("10_s1aqw")]
+position = Vector2(1484, 423)
+
+[node name="Pickup7" parent="PickUps" instance=ExtResource("10_s1aqw")]
+position = Vector2(562, 771)
+
+[node name="Pickup8" parent="PickUps" instance=ExtResource("10_s1aqw")]
+position = Vector2(1212, 901)
+
+[node name="Pickup9" parent="PickUps" instance=ExtResource("10_s1aqw")]
+position = Vector2(1732, 1209)
+
+[node name="Pickup10" parent="PickUps" instance=ExtResource("10_s1aqw")]
+position = Vector2(312, 1627)
+
 [node name="Exit" parent="." instance=ExtResource("12_tlkbj")]
 position = Vector2(2911, 288)
 
