@@ -1,0 +1,66 @@
+[gd_scene load_steps=11 format=3 uid="uid://fcx6wpoiqenr"]
+
+[ext_resource type="Texture2D" uid="uid://ciligwlb80xa" path="res://spritesheets/EXPLOSION_ANIMATION.png" id="1_ybmw0"]
+[ext_resource type="Script" path="res://scenes/boom/boom.gd" id="2_2j3nd"]
+[ext_resource type="AudioStream" uid="uid://0dyd2fuu31my" path="res://sounds/sfx_exp_medium4.wav" id="2_et0mi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2d1q"]
+atlas = ExtResource("1_ybmw0")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uv4qb"]
+atlas = ExtResource("1_ybmw0")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovx4o"]
+atlas = ExtResource("1_ybmw0")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rhy4m"]
+atlas = ExtResource("1_ybmw0")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ofvnt"]
+atlas = ExtResource("1_ybmw0")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdjin"]
+atlas = ExtResource("1_ybmw0")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fwilc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2d1q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uv4qb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovx4o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rhy4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ofvnt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdjin")
+}],
+"loop": false,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="Boom" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_fwilc")
+autoplay = "default"
+script = ExtResource("2_2j3nd")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_et0mi")
+autoplay = true
+
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]

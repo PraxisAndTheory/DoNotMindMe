@@ -1,0 +1,75 @@
+[gd_scene load_steps=4 format=3 uid="uid://nlj68hkerljb"]
+
+[ext_resource type="Script" path="res://scenes/game_ui/game_ui.gd" id="1_5fbo7"]
+[ext_resource type="LabelSettings" uid="uid://dc0xr10ivgd16" path="res://lg_blue_32.tres" id="1_m4peg"]
+[ext_resource type="LabelSettings" uid="uid://dsfnv3ucgsee1" path="res://lg_l_green_48.tres" id="2_n1h4w"]
+
+[node name="GameUi" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5fbo7")
+
+[node name="MC" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="ScoreLabel" type="Label" parent="MC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "0/100
+"
+label_settings = ExtResource("1_m4peg")
+
+[node name="ExitLabel" type="Label" parent="MC"]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+text = "Go to the exit!!"
+label_settings = ExtResource("2_n1h4w")
+
+[node name="TimeLabel" type="Label" parent="MC"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "00:00"
+label_settings = ExtResource("1_m4peg")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.364706, 0.458824, 0.709804)
+
+[node name="GameOverLabel" type="Label" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -397.0
+offset_top = -24.5
+offset_right = 397.0
+offset_bottom = 24.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Well done, you won in XX seconds!"
+label_settings = ExtResource("2_n1h4w")

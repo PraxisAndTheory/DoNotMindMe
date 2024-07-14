@@ -1,0 +1,73 @@
+[gd_scene load_steps=8 format=3 uid="uid://c7rx0yjfwsy04"]
+
+[ext_resource type="FontFile" uid="uid://c80ollr83mfpv" path="res://fonts/LuckiestGuy-Regular.ttf" id="1_15wou"]
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_y3cj6"]
+[ext_resource type="Texture2D" uid="uid://cc8pfd5sthohy" path="res://images/pill2.png" id="2_5xoyn"]
+[ext_resource type="Texture2D" uid="uid://dn11ufxiidios" path="res://images/pill1.png" id="3_8sg2q"]
+[ext_resource type="Texture2D" uid="uid://djjg4bttcpixx" path="res://images/survivor1_gun.png" id="4_2c1md"]
+[ext_resource type="Texture2D" uid="uid://b2fu6uvpqs5n4" path="res://images/soldier1_gun.png" id="5_0umeg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5iuwi"]
+font = ExtResource("1_15wou")
+font_size = 64
+font_color = Color(0.761592, 0.464212, 0.304799, 1)
+outline_size = 6
+outline_color = Color(0, 0, 0.32549, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y3cj6")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.301961, 0.690196, 1, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press space to play"
+label_settings = SubResource("LabelSettings_5iuwi")
+
+[node name="Pill2" type="Sprite2D" parent="."]
+position = Vector2(891, 157)
+rotation = 0.52616
+texture = ExtResource("2_5xoyn")
+
+[node name="Pill1" type="Sprite2D" parent="."]
+position = Vector2(227, 156)
+rotation = -1.76535
+texture = ExtResource("3_8sg2q")
+
+[node name="Survivor1Gun" type="Sprite2D" parent="."]
+position = Vector2(591, 486)
+rotation = 1.71267
+texture = ExtResource("4_2c1md")
+
+[node name="Soldier1Gun" type="Sprite2D" parent="."]
+position = Vector2(212, 506)
+texture = ExtResource("5_0umeg")
+
+[node name="Soldier1Gun2" type="Sprite2D" parent="."]
+position = Vector2(896, 527)
+texture = ExtResource("5_0umeg")
+flip_h = true

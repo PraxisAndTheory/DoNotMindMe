@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://whxdc16m3rxx"
+path="res://.godot/imported/sfx_sounds_powerup1.wav-e0d531d47882d5e6a86ea529b28b87d6.sample"
+
+[deps]
+
+source_file="res://sounds/Positive Sounds/sfx_sounds_powerup1.wav"
+dest_files=["res://.godot/imported/sfx_sounds_powerup1.wav-e0d531d47882d5e6a86ea529b28b87d6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
